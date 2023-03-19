@@ -16,10 +16,10 @@ function Navbar() {
                         <ul class="navbar-nav ">
                            
                             <li class="nav-item">
-                                <a href="#">Acceuil</a>
+                                <a href="/">Acceuil</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Connexion</a>
+                                <a href="/Connexion">Connexion</a>
                             </li>
                             <li class="nav-item user">
                                 <img src= {process.env.PUBLIC_URL + 'utilisateur.png'} />
