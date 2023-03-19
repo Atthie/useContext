@@ -13,3 +13,5 @@ function Connexion(){
         </form>
     )
 }
+
+export default Connexion
