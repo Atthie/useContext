@@ -34,3 +34,33 @@ a{
 .navbar-nav{
   display: flex;gap: 40px;
 }
+
+/* Menu */
+
+.menu {
+
+  display: flex; flex-direction: column; align-items: center;margin-top: 50px;
+
+}
+.card img{
+  width: 20vh;
+  height: 20vh;
+}
+
+.card {
+ display: flex; flex-direction: row;
+ width: 80vh;
+}
+.card-body{
+  display: flex; flex-direction: row;justify-content: space-between;
+  
+}
+.nom{
+  display: flex; flex-direction: column;
+  margin-top: 50px;
+  align-items: start;
+}
+.card-body a{
+  height: 50px;
+  margin-top: 50px;
+}
