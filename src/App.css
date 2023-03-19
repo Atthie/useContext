@@ -33,6 +33,9 @@ a{
 .navbar-nav{
   display: flex;gap: 40px;
 }
+
+
+
 /* Menu */
 .menu {
 
@@ -57,4 +60,15 @@ a{
 .card-body a{
   height: 50px;
   margin-top: 50px;
+}
+
+/* Connexion */
+
+form{
+  width: 40vh;
+  display: flex; flex-direction: column;gap: 20px;
+}
+
+.form{
+  display: flex; flex-direction: column; align-items: center;margin-top: 200px;
 }
