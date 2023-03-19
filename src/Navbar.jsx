@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom"
 function Navbar() {
 
     return (
@@ -14,12 +14,16 @@ function Navbar() {
                     </button>
                     <div class="collapse navbar-collapse p-2" id="navbarNav">
                         <ul class="navbar-nav ">
-                           
-                            <li class="nav-item">
-                                <a href="/">Acceuil</a>
+                            <li class="nav-item table">
+                                <img src= {process.env.PUBLIC_URL + 'table.png'} />
+                                <p>3</p>
                             </li>
                             <li class="nav-item">
-                                <a href="/Connexion">Connexion</a>
+                                <NavLink to="/">Acceuil</NavLink>
+                                
+                            </li>
+                            <li class="nav-item">
+                                <NavLink to="/Connexion">Connexion</NavLink>
                             </li>
                             <li class="nav-item user">
                                 <img src= {process.env.PUBLIC_URL + 'utilisateur.png'} />
@@ -29,9 +33,6 @@ function Navbar() {
                         </ul>
                     </div>
                 </div>
-                    
-                
-
             </div>
         </nav>
         
