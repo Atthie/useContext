@@ -1,6 +1,8 @@
+import { useContext } from "react"
 import { NavLink } from "react-router-dom"
+import { UserContext } from "./Usercontext"
 function Navbar() {
-
+const login = useContext(UserContext);
     return (
        
         <nav class="navbar navbar-expand-lg bg-primary">
@@ -20,14 +22,13 @@ function Navbar() {
                             </li>
                             <li class="nav-item">
                                 <NavLink to="/">Acceuil</NavLink>
-                                
                             </li>
                             <li class="nav-item">
                                 <NavLink to="/Connexion">Connexion</NavLink>
                             </li>
                             <li class="nav-item user">
                                 <img src= {process.env.PUBLIC_URL + 'utilisateur.png'} />
-                                <p>Atthie</p>
+                                <p> {login} </p>
                             </li>
                             
                         </ul>

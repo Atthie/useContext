@@ -1,35 +1,33 @@
 import Navbar from "./Navbar"
-import { useRef, useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
+import { UserContext} from "./Usercontext";
 
 function Connexion(){
-    const loginRef = useRef('')
-    const [logins, setLogin] = useState([])
-
+    let loginRef = useRef('')
+   const [use, setUse]=useState('')
     function login ( event ){
-        event.preventDefault()
-            console.log(logins)
-            const value = loginRef.current.value;
-            if (logins.includes(value)) 
-            {
-                console.log('deja')
-            } else {
-                setLogin([...logins, value]);
-                console.log('nouveau')
-            }
-            
-     }
+            event.preventDefault()
+            let value = loginRef.current.value;
+            setUse(value)
+            value = ''
+          
+
+    }
     return (
         <div>
+            <UserContext.Provider value={use}>
             <Navbar></Navbar>
             <div className="form">
                 <form onSubmit={login}>
                     <h3>Connexion</h3>
                     <div className="form-group">
-                        <input type="email"  ref={loginRef} className="form-control" id="exampleInputEmail1" placeholder="Enter email"/>
+                        <input type="text"  ref={loginRef} className="form-control" id="exampleInputEmail1" placeholder="Enter Name"/>
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
+            </UserContext.Provider>
+            
             
 
         </div>
